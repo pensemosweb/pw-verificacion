@@ -14,7 +14,7 @@ class PwVerificacionFormFirst extends LitElement {
   static get properties() {
     return {
       clave: String,
-      fecha: Date,
+      fecha: String,
       hora: String,
       periodo: String,
       tipoVerif: String,
