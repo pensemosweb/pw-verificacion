@@ -6,6 +6,9 @@ export class PwVerificacionForm extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      hasPlacaAtCenter: Boolean,
+      isDisabled: { type: Boolean, attribute: 'is-disabled' },
+      fields: Object
     };
   }
 
@@ -24,12 +27,35 @@ export class PwVerificacionForm extends LitElement {
   constructor() {
     super();
     this.hasPlacaAtCenter = false;
+    this.isDisabled = false;
+    this.fields = {}
   }
 
   render() {
+    const {
+      clave,
+      fecha,
+      hora,
+      periodo,
+      tipoVerif,
+      inspVisual,
+      pago,
+      pagoMulta,
+    } = this.fields;
+
     return html`
       <form>
-        <pw-verificacion-form-first></pw-verificacion-form-first>
+        <pw-verificacion-form-first
+          .clave=${clave}
+          .fecha=${fecha}
+          .hora=${hora}
+          .periodo=${periodo}
+          .tipoVerif=${tipoVerif}
+          .inspVisual=${inspVisual}
+          .pago=${pago}
+          .pagoMulta=${pagoMulta}
+          ?is-disabled=${this.isDisabled}
+        ></pw-verificacion-form-first>
         <section class="grid grid-cols-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>

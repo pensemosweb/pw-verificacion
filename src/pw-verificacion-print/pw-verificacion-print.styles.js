@@ -19,7 +19,9 @@ export default css`
       align-content: center;
       overflow: hidden;
       text-transform: uppercase;
-      font-size: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.2pt;
+      font-weight: bold;
     }
 
     .fecha {

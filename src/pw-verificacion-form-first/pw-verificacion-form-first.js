@@ -21,6 +21,7 @@ class PwVerificacionFormFirst extends LitElement {
       inspVisual: String,
       pago: String,
       pagoMulta: String,
+      isDisabled: { type: Boolean, attribute: 'is-disabled' }
     };
   }
 
@@ -38,7 +39,7 @@ class PwVerificacionFormFirst extends LitElement {
 
   render() {
     return html`
-      <section class="grid grid-template-cols-auto">
+      <form class="grid grid-template-cols-auto">
         <div class="flex flex-cols">
           <label for="clave">CLAVE:</label>
           <input
@@ -46,6 +47,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.clave}
             id="clave"
             name="clave"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -57,6 +59,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.fecha}
             id="fecha"
             name="fecha"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -68,6 +71,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.hora}
             id="hora"
             name="hora"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -79,6 +83,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.periodo}
             id="periodo"
             name="periodo"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -90,6 +95,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.tipoVerif}
             id="tipo-verif"
             name="tipoVerif"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -101,6 +107,7 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.inspVisual}
             id="insp-visual"
             name="inspVisual"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
@@ -112,10 +119,11 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.pago}
             id="pago"
             name="pago"
+            ?disabled=${this.isDisabled}
           />
         </div>
 
-        <div class="flex flex-cols print:hidden">
+        <div class="flex flex-cols">
           <label for="pago-multa">pago multa:</label>
           <input
             type="text"
@@ -123,9 +131,10 @@ class PwVerificacionFormFirst extends LitElement {
             .value=${this.pagoMulta}
             id="pago-multa"
             name="pagoMulta"
+            ?disabled=${this.isDisabled}
           />
         </div>
-      </section>
+      </form>
     `;
   }
 

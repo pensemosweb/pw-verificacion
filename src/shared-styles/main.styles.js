@@ -32,11 +32,6 @@ export default css`
 
   input {
     padding: 8px;
-    height: 16px;
-    font-size: 16px;
-  }
-
-  .btn {
-    padding: 8px;
+    height: 12px;
   }
 `;
