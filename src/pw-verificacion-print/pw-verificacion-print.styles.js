@@ -16,7 +16,7 @@ export default css`
       width: 13mm;
       display: flex;
       align-items: center;
-      align-content: center;
+      justify-content: center;
       overflow: hidden;
       text-transform: uppercase;
       font-family: Arial, Helvetica, sans-serif;
@@ -25,17 +25,17 @@ export default css`
     }
 
     .fecha {
-      margin-inline-start: 9mm;
+      margin-inline-start: 8mm;
     }
 
     .hora {
       margin-inline-start: 8mm;
-      width: 11mm;
+      width: 10mm;
     }
 
     .periodo {
       margin-inline-start: 12mm;
-      width: 18mm;
+      width: 17mm;
     }
 
     .tipoVerif {
@@ -43,12 +43,12 @@ export default css`
     }
 
     .inspVisual {
-      margin-inline-start: 16mm;
+      margin-inline-start: 15mm;
       width: 9mm;
     }
 
     .pago {
-      margin-inline-start: 8mm;
+      margin-inline-start: 7mm;
       width: 12mm
     }
 
@@ -57,8 +57,8 @@ export default css`
       width: 14mm;
     }
 
-    .first-row-repetition-one {
-      margin-block-start: 83mm;
+    .first-row-repetition {
+      margin-block-start: 82mm;
     }
   }
 `;
