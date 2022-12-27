@@ -1,10 +1,12 @@
 import { LitElement, html, css } from 'lit';
 import './pw-verificacion-form.js';
+import './pw-verificacion-print/pw-verificacion-print.js';
 
 export class PwVerificacion extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      fields: { type: Object }
     };
   }
 
@@ -12,9 +14,20 @@ export class PwVerificacion extends LitElement {
     return css`
       :host {
         display: block;
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: 100px 1fr 100px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      @media print {
+        .print\\:hidden {
+          display: none;
+        }
+
+        .print\\:visible {
+          display: block;
+        }
       }
     `;
   }
@@ -22,20 +35,34 @@ export class PwVerificacion extends LitElement {
   constructor() {
     super();
     this.title = 'Verificación';
+    this.fields = {};
   }
 
   render() {
     return html`
-      <header>
+      <header class="print:hidden">
         <h1>${this.title}</h1>
       </header>
       <main>
-        <pw-verificacion-form></pw-verificacion-form>
+        <pw-verificacion-form
+          @pw-field-changed=${this.onFieldChanged}
+          data-testid="form"
+          class="print:hidden"
+        ></pw-verificacion-form>
+        <pw-verificacion-print
+          .fields=${this.fields}
+          data-testid="print"
+          class="hidden print:visible"
+        ></pw-verificacion-print>
       </main>
 
-      <footer>
-        <h1>Footer</h1>
+      <footer class="print:hidden">
+        <button class="btn" @click=${() => window.print()}>Imprimir</button>
       </footer>
     `;
+  }
+
+  onFieldChanged(e) {
+    this.fields = { ...this.fields, ...e.detail };
   }
 }

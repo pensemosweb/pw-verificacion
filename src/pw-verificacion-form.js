@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import './pw-verificacion-form-first/pw-verificacion-form-first.js';
+import sharedStyles from './shared-styles/main.styles.js';
 
 export class PwVerificacionForm extends LitElement {
   static get properties() {
@@ -8,34 +10,15 @@ export class PwVerificacionForm extends LitElement {
   }
 
   static get styles() {
-    return css`
+    return [
+      sharedStyles,
+      css`
       :host {
         display: grid;
         row-gap: 3rem;
       }
-
-      input {
-        width: 100px;
-      }
-
-      .grid {
-        display: grid
-      }
-
-      .grid-rows-3 {
-        grid-template-rows: repeat(3, 1fr);
-      }
-
-      .grid-columns-2 {
-        grid-template-columns: 1fr 1fr; 
-      }
-
-      .grid-x-auto {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-        gap: 1rem;
-      }
-    `;
+    `
+    ];
   }
 
   constructor() {
@@ -46,35 +29,8 @@ export class PwVerificacionForm extends LitElement {
   render() {
     return html`
       <form>
-        <section class="grid-x-auto">
-          <label>
-            CLAVE:<input />
-          </label>
-          <label>
-            FECHA:<input />
-          </label>
-          <label>
-            HORA:<input />
-          </label>
-          <label>
-            PERIODO:<input />
-          </label>
-          <label>
-            TIPO DE VERIF.:<input />
-          </label>
-          <label>INSP. VISUAL.:
-            <input />
-          </label>
-          <label>
-            PAGO:
-            <input />
-          </label>
-          <label>
-            PAGO MULTA:
-            <input />
-          </label>
-        </section>
-        <section class="grid grid-columns-2">
+        <pw-verificacion-form-first></pw-verificacion-form-first>
+        <section class="grid grid-cols-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
           </div>

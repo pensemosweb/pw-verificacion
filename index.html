@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,11 @@
   <base href="/">
 
   <style>
+    html {
+      --pw-print-margin-block: 5mm;
+      --pw-print-margin-inline: 5mm;
+    }
+
     html,
     body {
       margin: 0;
@@ -15,6 +20,18 @@
       font-family: sans-serif;
       font-size: 12px;
       padding: 1rem;
+    }
+
+    @media print {
+      body {
+        margin: 0mm;
+        padding: 0mm;
+      }
+    }
+
+    @page {
+      margin: 0mm;
+      padding: 0mm;
     }
   </style>
   <title>pw-verificacion</title>
