@@ -30,6 +30,7 @@ export class PwVerificacionForm extends LitElement {
 
       .subtitle {
         text-align: center;
+        margin: 0;
       }
 
       .grid-columns-2 {
@@ -40,6 +41,19 @@ export class PwVerificacionForm extends LitElement {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
         gap: 1rem;
+      }
+
+      .dates-propetary input {
+        width: 50%;
+        margin: 0 0 1rem 1rem;
+      }
+
+      .dates-propetary-bottom {
+        margin-top: 3rem;
+      }
+
+      .dates-propetary-bottom label {
+        margin-left: 0.4rem;
       }
     `;
   }
@@ -74,8 +88,17 @@ export class PwVerificacionForm extends LitElement {
         <section class="grid grid-columns-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
-            <div>
+            <div class="dates-propetary">
               <input type="" name="" value="" placeholder="Nombre completo" />
+              <input type="" name="" value="" placeholder="Direccion" />
+            </div>
+
+            <div class="dates-propetary-bottom">
+              <label for="">C.P: <input type="" name="" value="" /></label>
+              <label for=""
+                >MUNICIPIO: <input type="" name="" value=""
+              /></label>
+              <label for="">ESTADO: <input type="" name="" value="" /></label>
             </div>
           </div>
 
