@@ -46,6 +46,7 @@ export class PwVerificacionForm extends LitElement {
     return html`
       <form>
         <pw-verificacion-form-first
+          data-testid="form-first"
           .clave=${clave}
           .fecha=${fecha}
           .hora=${hora}
