@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import './pw-verificacion-form-first/pw-verificacion-form-first.js';
+import './pw-verificacion-first-row/pw-verificacion-first-row.js';
 import sharedStyles from './shared-styles/main.styles.js';
 
 export class PwVerificacionForm extends LitElement {
@@ -45,7 +45,7 @@ export class PwVerificacionForm extends LitElement {
 
     return html`
       <form>
-        <pw-verificacion-form-first
+        <pw-verificacion-first-row
           data-testid="form-first"
           .clave=${clave}
           .fecha=${fecha}
@@ -56,7 +56,7 @@ export class PwVerificacionForm extends LitElement {
           .pago=${pago}
           .pagoMulta=${pagoMulta}
           ?is-disabled=${this.isDisabled}
-        ></pw-verificacion-form-first>
+        ></pw-verificacion-first-row>
         <section class="grid grid-cols-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>

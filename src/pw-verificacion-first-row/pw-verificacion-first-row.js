@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit';
 import sharedStyles from '../shared-styles/main.styles.js';
-import styles from './pw-verificacion-form-first.styles.js';
+import styles from './pw-verificacion-first-row.styles.js';
 
 class PwVerificacionFormFirst extends LitElement {
   static get is() {
-    return 'pw-verificacion-form-first';
+    return 'pw-verificacion-first-row';
   }
 
   static get styles() {
