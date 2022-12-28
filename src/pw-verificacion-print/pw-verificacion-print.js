@@ -25,7 +25,6 @@ class PwVerificacionPrint extends LitElement {
   render() {
     const {
       clave,
-      fecha,
       hora,
       periodo,
       tipoVerif,
@@ -37,7 +36,7 @@ class PwVerificacionPrint extends LitElement {
     return html`
       <section class="flex first-row">
         <div class="value clave">${clave}</div>
-        <div class="value fecha">${new Date(fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })}</div>
+        <div class="value fecha">${this.formatDate()}</div>
         <div class="value hora">${hora}</div>
         <div class="value periodo">${periodo}</div>
         <div class="value tipoVerif">${tipoVerif}</div>
@@ -46,9 +45,10 @@ class PwVerificacionPrint extends LitElement {
         <div class="value pagoMulta">${pagoMulta}</div>
       </section>
 
+
       <section class="flex first-row first-row-repetition-one">
         <div class="value clave">${clave}</div>
-        <div class="value fecha">${new Date(fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })}</div>
+        <div class="value fecha">${this.formatDate()}</div>
         <div class="value hora">${hora}</div>
         <div class="value periodo">${periodo}</div>
         <div class="value tipoVerif">${tipoVerif}</div>
@@ -59,7 +59,7 @@ class PwVerificacionPrint extends LitElement {
 
       <section class="flex first-row first-row-repetition-two">
         <div class="value clave">${clave}</div>
-        <div class="value fecha">${new Date(fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })}</div>
+        <div class="value fecha">${this.formatDate()}</div>
         <div class="value hora">${hora}</div>
         <div class="value periodo">${periodo}</div>
         <div class="value tipoVerif">${tipoVerif}</div>
@@ -68,6 +68,10 @@ class PwVerificacionPrint extends LitElement {
         <div class="value pagoMulta">${pagoMulta}</div>
       </section>
     `;
+  }
+
+  formatDate() {
+    return new Date(this.fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })
   }
 }
 
