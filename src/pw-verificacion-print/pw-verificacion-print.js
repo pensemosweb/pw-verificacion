@@ -46,7 +46,7 @@ class PwVerificacionPrint extends LitElement {
         <div class="value pagoMulta">${pagoMulta}</div>
       </section>
 
-      <section class="flex first-row first-row-repetition">
+      <section class="flex first-row first-row-repetition-one">
         <div class="value clave">${clave}</div>
         <div class="value fecha">${new Date(fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })}</div>
         <div class="value hora">${hora}</div>
@@ -57,7 +57,7 @@ class PwVerificacionPrint extends LitElement {
         <div class="value pagoMulta">${pagoMulta}</div>
       </section>
 
-      <section class="flex first-row first-row-repetition">
+      <section class="flex first-row first-row-repetition-two">
         <div class="value clave">${clave}</div>
         <div class="value fecha">${new Date(fecha).toLocaleString('es-MX', { year: 'numeric', month: '2-digit', day: '2-digit' })}</div>
         <div class="value hora">${hora}</div>

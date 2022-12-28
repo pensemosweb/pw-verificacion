@@ -57,8 +57,12 @@ export default css`
       width: 14mm;
     }
 
-    .first-row-repetition {
+    .first-row-repetition-one {
       margin-block-start: 82mm;
+    }
+
+    .first-row-repetition-two {
+      margin-block-start: 81mm;
     }
   }
 `;
