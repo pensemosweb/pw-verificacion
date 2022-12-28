@@ -19,15 +19,21 @@ export class PwVerificacionForm extends LitElement {
       }
 
       .grid {
-        display: grid
+        display: grid;
       }
 
       .grid-rows-3 {
         grid-template-rows: repeat(3, 1fr);
+        border: 0.1rem solid black;
+        border-radius: 1rem;
+      }
+
+      .subtitle {
+        text-align: center;
       }
 
       .grid-columns-2 {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
       }
 
       .grid-x-auto {
@@ -47,22 +53,13 @@ export class PwVerificacionForm extends LitElement {
     return html`
       <form>
         <section class="grid-x-auto">
-          <label>
-            CLAVE:<input />
-          </label>
-          <label>
-            FECHA:<input />
-          </label>
-          <label>
-            HORA:<input />
-          </label>
-          <label>
-            PERIODO:<input />
-          </label>
-          <label>
-            TIPO DE VERIF.:<input />
-          </label>
-          <label>INSP. VISUAL.:
+          <label> CLAVE:<input /> </label>
+          <label> FECHA:<input /> </label>
+          <label> HORA:<input /> </label>
+          <label> PERIODO:<input /> </label>
+          <label> TIPO DE VERIF.:<input /> </label>
+          <label
+            >INSP. VISUAL.:
             <input />
           </label>
           <label>
@@ -77,9 +74,13 @@ export class PwVerificacionForm extends LitElement {
         <section class="grid grid-columns-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
+            <div>
+              <input type="" name="" value="" placeholder="Nombre completo" />
+            </div>
           </div>
+
           <div class="vehiculo">
-          <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
+            <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
           </div>
         </section>
         <section class="proxima-verif-estatal-diesel">
