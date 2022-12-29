@@ -22,6 +22,7 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
+      border: 1px solid #ccc;
     }
 
     .fecha {
@@ -63,6 +64,166 @@ export default css`
 
     .first-row-repetition-two {
       margin-block-start: 81mm;
+    }
+
+
+    .datos-propietario {
+      margin-inline-start: calc(15mm - var(--pw-print-margin-inline));
+      margin-block-start: 5mm;
+    }
+
+
+    .nombre, .direccion {
+      height: 5mm;
+      width: 100%;
+    }
+
+    .direccion {
+      margin-block-start: 3mm;
+    }
+
+    .datos-propietario-bottom {
+      margin-block-start: 3mm;
+    }
+
+    .codigoPostal {
+      width: 16mm;
+    }
+
+    .codigoPostal, .municipio, .estado {
+      height: 7mm;
+    }
+
+    .municipio {
+      margin-inline-start: 13mm;
+      width: 24mm;
+    }
+
+    .estado {
+      margin-inline-start: 10mm;
+      width: 26mm;
+    }
+
+    .datos-vehiculo {
+      margin-block-start: 5mm;
+      margin-inline-start: 6mm;
+      row-gap: 3mm;
+    }
+
+    .marcasYmodelos {
+      display: flex;
+    }
+
+    .marca {
+      width: 22mm;
+      margin-inline-start: 9mm; 
+    }
+
+    .submarca {
+      margin-inline-start: 14mm;
+      width: 18mm;
+    }
+
+    .marca, .submarca {
+      height: 5mm;
+    }
+
+    .modelo, .modeloDSL {
+      height: 3mm;
+    }
+
+    .modelo {
+      margin-inline-start: 10mm;
+    }
+
+    .modeloDSL {
+      margin-inline-start: 16mm;
+    }
+
+    .h-1 {
+      height: 5mm;
+    }
+
+    .serie {
+      margin-inline-start: 8mm;
+      width: 28mm;
+    }
+
+    .placas {
+      margin-inline-start: 10mm;
+      width: 23mm;
+    }
+
+    .pesoBruto {
+      margin-inline-start: 16mm;
+      width: 12mm;
+    }
+
+    .combustible {
+      margin-inline-start: 18mm;
+      width: 36mm;
+    }
+
+    .clase {
+      margin-inline-start: 8mm;
+      width: 8mm;
+    }
+
+    .servicio {
+      margin-inline-start: 11mm;
+      width: 16mm;
+    }
+
+    .equipoTecnicoFolioAnt {
+      margin-inline-start: calc(20mm - var(--pw-print-margin-inline));
+    }
+
+    .equipo {
+      width: 19mm;
+    }
+
+    .tecnico {
+      margin-inline-start: 10mm;
+      width: 22mm;
+    }
+
+    .folioAnt {
+      margin-inline-start: 14mm;
+      width: 20mm;
+    }
+
+
+    .proximaVerif {
+      margin-inline-start: 15mm;
+      margin-block-start: 10mm;
+      height: 5mm;
+      width: 40mm;
+    }
+
+    .repeatedPlacas {
+      margin-inline-start: 23mm;
+      margin-block-start: 5mm;
+      height: 5mm;
+      width: 23mm;
+    }
+
+    .estatalDiesel {
+      display: grid;
+      grid-template-columns: 35mm 35mm;
+      grid-template-rows: 5mm 5mm;
+      margin-inline-start: 22mm;
+      margin-block-start: 11mm;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .statalDieselValue {
+      height: 5mm;
+      width: 100%;
+    }
+
+    [hidden] {
+      opacity: 0;
     }
   }
 `;

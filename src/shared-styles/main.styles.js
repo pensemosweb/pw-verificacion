@@ -11,10 +11,14 @@ export default css`
   }
 
   .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(100px,1fr));
+    grid-template-columns: repeat(3, minmax(50px,1fr));
   }
 
   .grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-rows-2 {
     grid-template-columns: 1fr 1fr;
   }
 
