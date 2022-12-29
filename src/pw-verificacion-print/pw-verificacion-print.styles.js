@@ -5,7 +5,7 @@ export default css`
     display: flex;
   }
 
-  @media print {
+  \\@media print {
     .first-row {
       margin-block-start: calc(20mm - var(--pw-print-margin-block));
       margin-inline-start: calc(20mm - var(--pw-print-margin-inline));

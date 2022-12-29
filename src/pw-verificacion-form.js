@@ -2,6 +2,8 @@ import { LitElement, html, css } from 'lit';
 import './pw-verificacion-first-row/pw-verificacion-first-row.js';
 import sharedStyles from './shared-styles/main.styles.js';
 
+import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
+
 export class PwVerificacionForm extends LitElement {
   static get properties() {
     return {
@@ -41,6 +43,16 @@ export class PwVerificacionForm extends LitElement {
       inspVisual,
       pago,
       pagoMulta,
+      marca,
+      submarca,
+      modelo,
+      modeloDSL,
+      serie,
+      placas,
+      pesoBruto,
+      combustible,
+      clase,
+      servicio,
     } = this.fields;
 
     return html`
@@ -62,7 +74,19 @@ export class PwVerificacionForm extends LitElement {
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
           </div>
           <div class="vehiculo">
-          <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
+          <pw-verificacion-datos-vehiculo
+            .marca=${marca}
+            .submarca=${submarca}
+            .modelo=${modelo}
+            .modeloDSL=${modeloDSL}
+            .serie=${serie}
+            .placas=${placas}
+            .pesoBruto=${pesoBruto}
+            .combustible=${combustible}
+            .clase=${clase}
+            .servicio=${servicio}
+          >
+          </pw-verificacion-datos-vehiculo>
           </div>
         </section>
         <section class="proxima-verif-estatal-diesel">

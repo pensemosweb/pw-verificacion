@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import sharedStyles from '../shared-styles/main.styles.js';
 import styles from './pw-verificacion-first-row.styles.js';
 
-class PwVerificacionFormFirst extends LitElement {
+class PwVerificacionFirstRow extends LitElement {
   static get is() {
     return 'pw-verificacion-first-row';
   }
@@ -150,4 +150,4 @@ class PwVerificacionFormFirst extends LitElement {
   }
 }
 
-customElements.define(PwVerificacionFormFirst.is, PwVerificacionFormFirst);
+customElements.define(PwVerificacionFirstRow.is, PwVerificacionFirstRow);
