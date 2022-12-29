@@ -27,6 +27,16 @@ export class PwVerificacion extends LitElement {
       inspVisual: '',
       pago: '',
       pagoMulta: '',
+      marca: '',
+      submarca: '',
+      modelo: '',
+      modeloDSL: '',
+      serie: '',
+      placas: '',
+      pesoBruto: '',
+      combustible: '',
+      clase: '',
+      servicio: '',
     };
   }
 
