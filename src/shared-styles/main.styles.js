@@ -7,7 +7,11 @@ export default css`
   }
 
   .grid-rows-3 {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(12px,1fr));
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(100px,1fr));
   }
 
   .grid-cols-2 {
@@ -16,6 +20,14 @@ export default css`
 
   .grid-template-cols-auto {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .grid-template-rows-auto {
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .gap-0 {
+    gap: 0;
   }
 
   .flex {
@@ -33,5 +45,33 @@ export default css`
   input {
     padding: 8px;
     height: 12px;
+  }
+
+  .mbe-1 {
+    margin-block-end: 8px;
+  }
+
+  .mbe-2 {
+    margin-block-end: 16px;
+  }
+
+  .mbe-3 {
+    margin-block-end: 24px;
+  }
+
+  .mbe-4 {
+    margin-block-end: 32px;
+  }
+
+  .border {
+    border: 1px solid #ccc;
+  }
+
+  .p-2 {
+    padding: 16px
+  }
+
+  .text-lg {
+    font-size: 24px;
   }
 `;

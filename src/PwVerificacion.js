@@ -37,6 +37,19 @@ export class PwVerificacion extends LitElement {
       combustible: '',
       clase: '',
       servicio: '',
+      equipo: '',
+      tecnico: '',
+      folioAnt: '',
+      limiteLuz: '',
+      limiteOpacidad: '',
+      resultadoLuz: '',
+      resultadoOpacidad: '',
+      proximaVerif: '',
+      nombre: '',
+      direccion: '',
+      codigoPostal: '',
+      municipio: '',
+      estado: ''
     };
   }
 
@@ -50,6 +63,7 @@ export class PwVerificacion extends LitElement {
         </section>
       </header>
       <main>
+
         <pw-verificacion-form
           .fields=${this.fields}
           @pw-field-changed=${this.onFieldChanged}
@@ -57,21 +71,22 @@ export class PwVerificacion extends LitElement {
           class="print:hidden"
         ></pw-verificacion-form>
 
-        <h2>Repetición</h2>
         <pw-verificacion-form
+          title="Repeticion 1"
           .fields=${this.fields}
           data-testid="form-disabled-1"
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
 
-        <h2>Repetición</h2>
         <pw-verificacion-form
+          title="Repeticion 2"
           .fields=${this.fields}
           data-testid="form-disabled-2"
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
+        
         <pw-verificacion-print
           .fields=${this.fields}
           data-testid="print"
