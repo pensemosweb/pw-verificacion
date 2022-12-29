@@ -21,6 +21,7 @@ export class PwVerificacionForm extends LitElement {
       :host {
         display: grid;
         row-gap: 3rem;
+        margin-block-end: 6rem;
       }
     `
     ];
@@ -69,26 +70,30 @@ export class PwVerificacionForm extends LitElement {
           .pagoMulta=${pagoMulta}
           ?is-disabled=${this.isDisabled}
         ></pw-verificacion-first-row>
+
         <section class="grid grid-cols-2">
           <div class="grid grid-rows-3">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
           </div>
           <div class="vehiculo">
-          <pw-verificacion-datos-vehiculo
-            .marca=${marca}
-            .submarca=${submarca}
-            .modelo=${modelo}
-            .modeloDSL=${modeloDSL}
-            .serie=${serie}
-            .placas=${placas}
-            .pesoBruto=${pesoBruto}
-            .combustible=${combustible}
-            .clase=${clase}
-            .servicio=${servicio}
-          >
-          </pw-verificacion-datos-vehiculo>
+            <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
+            <pw-verificacion-datos-vehiculo
+              .marca=${marca}
+              .submarca=${submarca}
+              .modelo=${modelo}
+              .modeloDSL=${modeloDSL}
+              .serie=${serie}
+              .placas=${placas}
+              .pesoBruto=${pesoBruto}
+              .combustible=${combustible}
+              .clase=${clase}
+              .servicio=${servicio}
+              ?is-disabled=${this.isDisabled}
+            >
+            </pw-verificacion-datos-vehiculo>
           </div>
         </section>
+
         <section class="proxima-verif-estatal-diesel">
           <div class="proxima-verif"></div>
           <div class="estatal-diesel"></div>

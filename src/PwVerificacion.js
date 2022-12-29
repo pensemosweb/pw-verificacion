@@ -56,12 +56,16 @@ export class PwVerificacion extends LitElement {
           data-testid="form"
           class="print:hidden"
         ></pw-verificacion-form>
+
+        <h2>Repetición</h2>
         <pw-verificacion-form
           .fields=${this.fields}
           data-testid="form-disabled-1"
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
+
+        <h2>Repetición</h2>
         <pw-verificacion-form
           .fields=${this.fields}
           data-testid="form-disabled-2"
