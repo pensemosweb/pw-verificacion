@@ -19,7 +19,6 @@
 /_site/
 /dist/
 /out-tsc/
-/docs/
 
 storybook-static
 custom-elements.json
