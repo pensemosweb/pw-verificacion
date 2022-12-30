@@ -130,6 +130,7 @@ class PwVerificacionPrint extends LitElement {
       </section>`;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   formatDate(fecha) {
     if (fecha) {
       return new Date(fecha).toLocaleString('es-MX', {

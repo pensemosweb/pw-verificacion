@@ -7,7 +7,7 @@ export default css`
 
   @media print {
     .first-row {
-      margin-block-start: calc(20mm - var(--pw-print-margin-block));
+      margin-block-start: calc(18mm - var(--pw-print-margin-block));
       margin-inline-start: calc(20mm - var(--pw-print-margin-inline));
     }
 
@@ -69,13 +69,14 @@ export default css`
 
     .datos-propietario {
       margin-inline-start: calc(15mm - var(--pw-print-margin-inline));
-      margin-block-start: 5mm;
+      margin-block-start: 1mm;
     }
 
 
     .nombre, .direccion {
       height: 5mm;
       width: 100%;
+      justify-content: flex-start;
     }
 
     .direccion {
@@ -83,7 +84,7 @@ export default css`
     }
 
     .datos-propietario-bottom {
-      margin-block-start: 3mm;
+      margin-block-start: 0mm;
     }
 
     .codigoPostal {
@@ -91,7 +92,7 @@ export default css`
     }
 
     .codigoPostal, .municipio, .estado {
-      height: 7mm;
+      height: 5mm;
     }
 
     .municipio {
@@ -105,9 +106,9 @@ export default css`
     }
 
     .datos-vehiculo {
-      margin-block-start: 5mm;
+      margin-block-start: 1mm;
       margin-inline-start: 6mm;
-      row-gap: 3mm;
+      row-gap: 2mm;
     }
 
     .marcasYmodelos {
@@ -175,7 +176,7 @@ export default css`
     }
 
     .equipoTecnicoFolioAnt {
-      margin-inline-start: calc(20mm - var(--pw-print-margin-inline));
+      margin-inline-start: calc(10mm - var(--pw-print-margin-inline));
     }
 
     .equipo {
