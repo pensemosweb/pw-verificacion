@@ -59,11 +59,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 35mm;
+      margin-block-start: 22mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 30mm;
+      margin-block-start: 22mm;
     }
 
 
