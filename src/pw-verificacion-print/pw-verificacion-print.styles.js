@@ -59,17 +59,17 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 82mm;
+      margin-block-start: 35mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 81mm;
+      margin-block-start: 30mm;
     }
 
 
     .datos-propietario {
       margin-inline-start: calc(15mm - var(--pw-print-margin-inline));
-      margin-block-start: 1mm;
+      margin-block-start: 5mm;
     }
 
 
@@ -84,7 +84,7 @@ export default css`
     }
 
     .datos-propietario-bottom {
-      margin-block-start: 0mm;
+      margin-block-start: 3mm;
     }
 
     .codigoPostal {
@@ -106,7 +106,7 @@ export default css`
     }
 
     .datos-vehiculo {
-      margin-block-start: 1mm;
+      margin-block-start: 5mm;
       margin-inline-start: 6mm;
       row-gap: 2mm;
     }
@@ -184,8 +184,8 @@ export default css`
     }
 
     .tecnico {
-      margin-inline-start: 10mm;
-      width: 22mm;
+      margin-inline-start: 0mm;
+      width: 32mm;
     }
 
     .folioAnt {
@@ -213,7 +213,7 @@ export default css`
       grid-template-columns: 35mm 35mm;
       grid-template-rows: 5mm 5mm;
       margin-inline-start: 22mm;
-      margin-block-start: 11mm;
+      margin-block-start: 16mm;
       align-items: center;
       justify-items: center;
     }

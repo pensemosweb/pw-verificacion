@@ -25,8 +25,8 @@ class PwVerificacionPrint extends LitElement {
   render() {
     return html`
       ${this.renderValues({ hasDuplicatedPlaca: true })}
-      ${this.renderValues({ repeat: 'uno' })}
-      ${this.renderValues({ repeat: 'dos' })}
+      ${this.renderValues({ repeat: 'one' })}
+      ${this.renderValues({ repeat: 'two' })}
     `
   }
 
