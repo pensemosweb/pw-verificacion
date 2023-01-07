@@ -144,6 +144,7 @@ export class PwVerificacionForm extends LitElement {
           equipo: this.fields.equipo,
           tecnico: this.fields.tecnico,
           folio: this.fields.folio,
+          isDisabled: this.isDisabled,
           
         })}
         </section>
