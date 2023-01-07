@@ -46,7 +46,7 @@ export default css`
     text-transform: uppercase;
   }
 
-  input {
+  .pw-input {
     padding: 8px;
     height: 12px;
   }
@@ -77,5 +77,12 @@ export default css`
 
   .text-lg {
     font-size: 24px;
+  }
+
+  button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
   }
 `;

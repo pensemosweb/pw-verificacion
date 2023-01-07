@@ -17,6 +17,10 @@
     "start": "web-dev-server"
   },
   "dependencies": {
+    "@vaadin/button": "^23.3.2",
+    "@vaadin/custom-field": "^23.3.2",
+    "@vaadin/number-field": "^23.3.2",
+    "@vaadin/text-field": "^23.3.2",
     "lit": "^2.0.2"
   },
   "devDependencies": {

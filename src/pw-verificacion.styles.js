@@ -10,11 +10,6 @@ export default css`
   display: none;
 }
 
-.btn {
-  padding: 8px;
-  cursor: pointer;
-}
-
 .actions {
   display: flex;
   justify-content: space-between;

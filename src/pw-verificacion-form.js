@@ -1,9 +1,12 @@
 import { LitElement, html, css } from 'lit';
-import './pw-verificacion-first-row/pw-verificacion-first-row.js';
 import sharedStyles from './shared-styles/main.styles.js';
 
 import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
 import './pw-verificacion-last-row/pw-verificacion-last-row.js';
+
+import { renderFirstRow } from './templates/renderFirstRow.js';
+
+import '@vaadin/button';
 
 export class PwVerificacionForm extends LitElement {
   static get properties() {
@@ -37,14 +40,6 @@ export class PwVerificacionForm extends LitElement {
 
   render() {
     const {
-      clave,
-      fecha,
-      hora,
-      periodo,
-      tipoVerif,
-      inspVisual,
-      pago,
-      pagoMulta,
       marca,
       submarca,
       modelo,
@@ -70,19 +65,21 @@ export class PwVerificacionForm extends LitElement {
     return html`
       <form>
         ${this.title ? html`<h1>${this.title}</h1>` : null}
-        <pw-verificacion-first-row
-          class="mbe-2"
-          data-testid="form-first"
-          .clave=${clave}
-          .fecha=${fecha}
-          .hora=${hora}
-          .periodo=${periodo}
-          .tipoVerif=${tipoVerif}
-          .inspVisual=${inspVisual}
-          .pago=${pago}
-          .pagoMulta=${pagoMulta}
-          ?is-disabled=${this.isDisabled}
-        ></pw-verificacion-first-row>
+        <button>
+          <vaadin-button>Submit</vaadin-button>
+        </button>
+
+        ${renderFirstRow({
+          clave: this.fields.clave,
+          fecha: this.fields.fecha,
+          hora: this.fields.hora,
+          periodo: this.fields.periodo,
+          tipoVerif: this.fields.tipoVerif,
+          inspVisual: this.fields.inspVisual,
+          pago: this.fields.pago,
+          pagoMulta: this.fields.pagoMulta,
+          isDisabled: this.isDisabled,
+        })}
 
         <section class="grid grid-cols-2 mbe-2">
           <div>
