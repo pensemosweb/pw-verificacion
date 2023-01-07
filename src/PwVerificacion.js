@@ -27,6 +27,29 @@ export class PwVerificacion extends LitElement {
       inspVisual: '',
       pago: '',
       pagoMulta: '',
+      marca: '',
+      submarca: '',
+      modelo: '',
+      modeloDSL: '',
+      serie: '',
+      placas: '',
+      pesoBruto: '',
+      combustible: '',
+      clase: '',
+      servicio: '',
+      equipo: 'TECNOTEST',
+      tecnico: 'Mario Alberto Perez Salinas',
+      folioAnt: '',
+      limiteLuz: '',
+      limiteOpacidad: '',
+      resultadoLuz: '',
+      resultadoOpacidad: '',
+      proximaVerif: '',
+      nombre: '',
+      direccion: '',
+      codigoPostal: '',
+      municipio: '',
+      estado: ''
     };
   }
 
@@ -40,24 +63,30 @@ export class PwVerificacion extends LitElement {
         </section>
       </header>
       <main>
+
         <pw-verificacion-form
           .fields=${this.fields}
           @pw-field-changed=${this.onFieldChanged}
           data-testid="form"
           class="print:hidden"
         ></pw-verificacion-form>
+
         <pw-verificacion-form
+          title="Repeticion 1"
           .fields=${this.fields}
           data-testid="form-disabled-1"
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
+
         <pw-verificacion-form
+          title="Repeticion 2"
           .fields=${this.fields}
           data-testid="form-disabled-2"
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
+        
         <pw-verificacion-print
           .fields=${this.fields}
           data-testid="print"

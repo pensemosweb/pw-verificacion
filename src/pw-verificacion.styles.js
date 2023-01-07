@@ -3,15 +3,11 @@ import { css } from 'lit';
 export default css`
 :host {
   display: block;
+  text-transform: uppercase;
 }
 
 .hidden {
   display: none;
-}
-
-.btn {
-  padding: 8px;
-  cursor: pointer;
 }
 
 .actions {
