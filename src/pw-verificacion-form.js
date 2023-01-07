@@ -86,6 +86,7 @@ export class PwVerificacionForm extends LitElement {
                 codigoPostal: this.fields.codigoPostal,
                 municipio: this.fields.municipio,
                 estado: this.fields.estado,
+                isDisabled: this.isDisabled,
               })}
             </div>
           </div>
