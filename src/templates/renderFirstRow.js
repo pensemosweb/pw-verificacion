@@ -94,7 +94,7 @@ export function renderFirstRow(fields) {
       </div>
 
       <div class="flex flex-cols">
-      <vaadin-number-field
+        <vaadin-number-field
           label="Pago"
           @input=${onInput}
           .value=${fields.pago}
