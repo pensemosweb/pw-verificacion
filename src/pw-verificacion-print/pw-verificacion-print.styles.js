@@ -50,7 +50,7 @@ export default css`
 
     .pago {
       margin-inline-start: 7mm;
-      width: 12mm
+      width: 12mm;
     }
 
     .pagoMulta {
@@ -66,14 +66,13 @@ export default css`
       margin-block-start: 22mm;
     }
 
-
     .datos-propietario {
       margin-inline-start: calc(15mm - var(--pw-print-margin-inline));
       margin-block-start: 5mm;
     }
 
-
-    .nombre, .direccion {
+    .nombre,
+    .direccion {
       height: 5mm;
       width: 100%;
       justify-content: flex-start;
@@ -91,7 +90,9 @@ export default css`
       width: 16mm;
     }
 
-    .codigoPostal, .municipio, .estado {
+    .codigoPostal,
+    .municipio,
+    .estado {
       height: 5mm;
     }
 
@@ -117,7 +118,7 @@ export default css`
 
     .marca {
       width: 22mm;
-      margin-inline-start: 9mm; 
+      margin-inline-start: 9mm;
     }
 
     .submarca {
@@ -125,11 +126,13 @@ export default css`
       width: 18mm;
     }
 
-    .marca, .submarca {
+    .marca,
+    .submarca {
       height: 5mm;
     }
 
-    .modelo, .modeloDSL {
+    .modelo,
+    .modeloDSL {
       height: 3mm;
     }
 
@@ -185,14 +188,12 @@ export default css`
 
     .tecnico {
       margin-inline-start: 0mm;
-      width: 32mm;
+      width: 52mm;
     }
 
     .folioAnt {
-      margin-inline-start: 14mm;
-      width: 20mm;
+      width: 23mm;
     }
-
 
     .proximaVerif {
       margin-inline-start: 15mm;
