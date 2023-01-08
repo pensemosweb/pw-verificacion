@@ -1,14 +1,15 @@
 import { LitElement, html, css } from 'lit';
-import sharedStyles from './shared-styles/main.styles.js';
+import '@vaadin/button';
+import '@vaadin/text-field';
 
-import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
-import './pw-verificacion-last-row/pw-verificacion-last-row.js';
+import sharedStyles from './shared-styles/main.styles.js';
 
 import { renderFirstRow } from './templates/renderFirstRow.js';
 import { renderEquipioTecnicFolio } from './templates/renderEquipoTecnicoFolio.js';
 import { renderDatosPropietario } from './templates/renderDatosPropietario.js';
 import { renderDatosVehiculo } from './templates/renderDatosVehiculo.js';
-import '@vaadin/button';
+import { onInput } from './templates/eventHandlers.js';
+import { renderEstatalDiesel } from './templates/renderEstatalDiesel.js';
 
 export class PwVerificacionForm extends LitElement {
   static get properties() {
@@ -41,14 +42,6 @@ export class PwVerificacionForm extends LitElement {
   }
 
   render() {
-    const {
-      limiteLuz,
-      limiteOpacidad,
-      resultadoLuz,
-      resultadoOpacidad,
-      proximaVerif,
-    } = this.fields;
-
     return html`
       <form @submit=${this.print}>
         ${this.title ? html`<h1>${this.title}</h1>` : null}
@@ -109,23 +102,34 @@ export class PwVerificacionForm extends LitElement {
           })}
         </section>
 
-        <pw-verificacion-last-row
-          .limiteLuz=${limiteLuz}
-          .limiteOpacidad=${limiteOpacidad}
-          .resultadoLuz=${resultadoLuz}
-          .resultadoOpacidad=${resultadoOpacidad}
-          .proximaVerif=${proximaVerif}
-          ?is-disabled=${this.isDisabled}
-        ></pw-verificacion-last-row>
+        <section class="grid grid-cols-2 mbe-2">
+          <div>
+            <vaadin-text-field
+              label="Próxima verificación"
+              name="proximaVerif"
+              required
+              .value=${this.fields.proximaVerif}
+              placeholder="Próxima verificación"
+              @input=${onInput}
+              ?disabled=${this.isDisabled}
+              error-message="La próxima verificación es obligatoria"
+            >
+            </vaadin-text-field>
+          </div>
 
-        <section class="proxima-verif-estatal-diesel">
-          <div class="proxima-verif"></div>
-          <div class="estatal-diesel"></div>
+          ${renderEstatalDiesel({
+            limiteLuz: this.fields.limiteLuz,
+            limiteOpacidad: this.fields.limiteOpacidad,
+            resultadoLuz: this.fields.resultadoLuz,
+            resultadoOpacidad: this.fields.resultadoOpacidad,
+            isDisabled: this.isDisabled
+          })}
         </section>
       </form>
     `;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   print(e) {
     e.preventDefault();
     window.print();
