@@ -3,7 +3,7 @@ import '@vaadin/text-field';
 import '@vaadin/custom-field';
 import '@vaadin/number-field';
 
-import { onInput } from './eventHandlers.js';
+import { onInput, onDateInput } from './eventHandlers.js';
 
 export function renderFirstRow(fields) {
   return html`
@@ -26,8 +26,8 @@ export function renderFirstRow(fields) {
         <vaadin-custom-field label="Fecha">
           <input
             type="date"
-            @input=${onInput}
-            .value=${fields.fecha}
+            @input=${onDateInput}
+            .value=${fields.fecha.value}
             id="fecha"
             name="fecha"
             required
@@ -71,7 +71,7 @@ export function renderFirstRow(fields) {
           label="tipo de verif.:"
           name="tipoVerif"
           required
-          .value=${fields.periodo}
+          .value=${fields.tipoVerif}
           placeholder="Tipo Verif."
           @input=${onInput}
           ?disabled=${fields.isDisabled}
