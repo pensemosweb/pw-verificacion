@@ -13,7 +13,6 @@ export function renderEquipioTecnicFolio(fields) {
           required
           .value=${fields.equipo}
           @input=${onInput}
-          readonly
           ?disabled=${fields.isDisabled}
           error-message="El equipo es obligatorio"
         >
@@ -29,9 +28,8 @@ export function renderEquipioTecnicFolio(fields) {
           required
           .value=${fields.tecnico}
           @input=${onInput}
-          readonly
           ?disabled=${fields.isDisabled}
-          error-message="El tecnico es obligatorio"
+          error-message="El técnico es obligatorio"
         >
         </vaadin-text-field>
       </div>
@@ -39,13 +37,13 @@ export function renderEquipioTecnicFolio(fields) {
       <div class="flex flex-cols">
         <vaadin-text-field
           label="folio ant"
-          name="folio"
+          name="folioAnt"
           required
-          .value=${fields.folio}
-          placeholder= "numro de folio"
+          .value=${fields.folioAnt}
+          placeholder= "Número de folio"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
-          error-message="El folio es obligatorio"
+          error-message="El número de folio es obligatorio"
         >
         </vaadin-text-field>
       </div>

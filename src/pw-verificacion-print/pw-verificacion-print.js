@@ -73,8 +73,8 @@ class PwVerificacionPrint extends LitElement {
         <div class="value periodo">${periodo}</div>
         <div class="value tipoVerif">${tipoVerif}</div>
         <div class="value inspVisual">${inspVisual}</div>
-        <div class="value pago">${pago}</div>
-        <div class="value pagoMulta">${pagoMulta}</div>
+        <div class="value pago">${pago ? `$${pago}` : ''}</div>
+        <div class="value pagoMulta">${pagoMulta ? `$${pagoMulta}` : ''}</div>
       </section>
 
       <section class="flex">
