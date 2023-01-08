@@ -122,7 +122,7 @@ export class PwVerificacionForm extends LitElement {
             limiteOpacidad: this.fields.limiteOpacidad,
             resultadoLuz: this.fields.resultadoLuz,
             resultadoOpacidad: this.fields.resultadoOpacidad,
-            isDisabled: this.isDisabled
+            isDisabled: this.isDisabled,
           })}
         </section>
       </form>

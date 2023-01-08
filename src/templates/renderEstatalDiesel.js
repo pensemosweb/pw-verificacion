@@ -36,7 +36,7 @@ export function renderEstatalDiesel(fields) {
       </div>
       <div class="border p-2">Resultado</div>
       <div class="border p-2">
-      <vaadin-number-field
+        <vaadin-number-field
           name="resultadoLuz"
           required
           .value=${fields.resultadoLuz}
@@ -47,7 +47,7 @@ export function renderEstatalDiesel(fields) {
         </vaadin-number-field>
       </div>
       <div class="border p-2">
-      <vaadin-number-field
+        <vaadin-number-field
           name="resultadoOpacidad"
           required
           .value=${fields.resultadoOpacidad}
