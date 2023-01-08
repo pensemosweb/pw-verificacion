@@ -5,7 +5,6 @@ import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
 import './pw-verificacion-last-row/pw-verificacion-last-row.js';
 
 import { renderFirstRow } from './templates/renderFirstRow.js';
-
 import '@vaadin/button';
 
 export class PwVerificacionForm extends LitElement {
