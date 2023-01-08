@@ -57,13 +57,6 @@ export class PwVerificacion extends LitElement {
     return html`
       <header class="print:hidden">
         <h1>${this.title}</h1>
-
-        <!--
-        <section class="actions">
-          <button class="btn" @click=${this.print}>Imprimir</button>
-          <button class="btn" @click=${this.print}>Imprimir</button>
-        </section>
-        -->
       </header>
       <main>
         <pw-verificacion-form
@@ -95,15 +88,6 @@ export class PwVerificacion extends LitElement {
           class="hidden print:visible"
         ></pw-verificacion-print>
       </main>
-
-      <!--
-      <footer class="footer print:hidden">
-      <section class="actions">
-          <button class="btn" @click=${this.print}>Imprimir</button>
-          <button class="btn" @click=${this.print}>Imprimir</button>
-        </section>
-      </footer>
-      -->
     `;
   }
 
