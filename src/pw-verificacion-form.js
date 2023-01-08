@@ -60,12 +60,11 @@ export class PwVerificacionForm extends LitElement {
     } = this.fields;
 
     return html`
-      <form>
+      <form @submit=${this.print}>
         ${this.title ? html`<h1>${this.title}</h1>` : null}
         <button>
-          <vaadin-button>Submit</vaadin-button>
+          <vaadin-button>Imprimir</vaadin-button>
         </button>
-
 
         ${renderFirstRow({
           clave: this.fields.clave,
@@ -113,14 +112,12 @@ export class PwVerificacionForm extends LitElement {
         </section>
 
         <section class="grid grid-template-cols-auto mbe-2">
-
-        ${renderEquipioTecnicFolio({
-          equipo: this.fields.equipo,
-          tecnico: this.fields.tecnico,
-          folio: this.fields.folio,
-          isDisabled: this.isDisabled,
-          
-        })}
+          ${renderEquipioTecnicFolio({
+            equipo: this.fields.equipo,
+            tecnico: this.fields.tecnico,
+            folio: this.fields.folio,
+            isDisabled: this.isDisabled,
+          })}
         </section>
 
         <pw-verificacion-last-row
@@ -138,6 +135,11 @@ export class PwVerificacionForm extends LitElement {
         </section>
       </form>
     `;
+  }
+
+  print(e) {
+    e.preventDefault();
+    window.print();
   }
 }
 
