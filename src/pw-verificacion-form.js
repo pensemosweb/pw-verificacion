@@ -5,6 +5,7 @@ import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
 import './pw-verificacion-last-row/pw-verificacion-last-row.js';
 
 import { renderFirstRow } from './templates/renderFirstRow.js';
+import { renderEquipioTecnicFolio } from './templates/renderEquipoTecnicoFolio.js';
 import { renderDatosPropietario } from './templates/renderDatosPropietario.js';
 
 import '@vaadin/button';
@@ -65,6 +66,7 @@ export class PwVerificacionForm extends LitElement {
           <vaadin-button>Submit</vaadin-button>
         </button>
 
+
         ${renderFirstRow({
           clave: this.fields.clave,
           fecha: this.fields.fecha,
@@ -111,24 +113,14 @@ export class PwVerificacionForm extends LitElement {
         </section>
 
         <section class="grid grid-template-cols-auto mbe-2">
-          <pw-field
-            label="equipo"
-            name="equipo"
-            .value=${this.fields.equipo}
-            ?is-disabled=${this.isDisabled}
-          ></pw-field>
-          <pw-field
-            label="tecnico"
-            name="tecnico"
-            .value=${this.fields.tecnico}
-            ?is-disabled=${this.isDisabled}
-          ></pw-field>
-          <pw-field
-            label="Folio Ant."
-            name="folioAnt"
-            .value=${this.fields.folioAnt}
-            ?is-disabled=${this.isDisabled}
-          ></pw-field>
+
+        ${renderEquipioTecnicFolio({
+          equipo: this.fields.equipo,
+          tecnico: this.fields.tecnico,
+          folio: this.fields.folio,
+          isDisabled: this.isDisabled,
+          
+        })}
         </section>
 
         <pw-verificacion-last-row
