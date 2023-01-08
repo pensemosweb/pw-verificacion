@@ -7,12 +7,12 @@ export class PwVerificacion extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      fields: { type: Object }
+      fields: { type: Object },
     };
   }
 
   static get styles() {
-    return [styles]
+    return [styles];
   }
 
   constructor() {
@@ -49,7 +49,7 @@ export class PwVerificacion extends LitElement {
       direccion: '',
       codigoPostal: '',
       municipio: '',
-      estado: ''
+      estado: '',
     };
   }
 
@@ -57,13 +57,8 @@ export class PwVerificacion extends LitElement {
     return html`
       <header class="print:hidden">
         <h1>${this.title}</h1>
-        <section class="actions">
-          <button class="btn" @click=${this.print}>Imprimir</button>
-          <button class="btn" @click=${this.print}>Imprimir</button>
-        </section>
       </header>
       <main>
-
         <pw-verificacion-form
           .fields=${this.fields}
           @pw-field-changed=${this.onFieldChanged}
@@ -86,27 +81,17 @@ export class PwVerificacion extends LitElement {
           class="print:hidden"
           is-disabled
         ></pw-verificacion-form>
-        
+
         <pw-verificacion-print
           .fields=${this.fields}
           data-testid="print"
           class="hidden print:visible"
         ></pw-verificacion-print>
       </main>
-
-      <footer class="footer print:hidden">
-      <section class="actions">
-          <button class="btn" @click=${this.print}>Imprimir</button>
-          <button class="btn" @click=${this.print}>Imprimir</button>
-        </section>
-      </footer>
     `;
   }
 
   // eslint-disable-next-line class-methods-use-this
-  print() {
-    window.print();
-  }
 
   onFieldChanged(e) {
     this.fields = { ...this.fields, ...e.detail };
