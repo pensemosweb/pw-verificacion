@@ -23,7 +23,7 @@ export function renderDatosPropietario(fields) {
           name="direccion"
           required
           .value=${fields.direccion}
-          placeholder="Direccón"
+          placeholder="Dirección"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
           error-message="La dirección es obligatoria"
