@@ -68,7 +68,7 @@ class PwVerificacionPrint extends LitElement {
     return html`
       <section class="flex first-row ${repeat ? `first-row-repetition-${repeat}` : ''}">
         <div class="value clave">${clave}</div>
-        <div class="value fecha">${this.formatDate(fecha)}</div>
+        <div class="value fecha">${this.formatDate(fecha.valueAsNumber)}</div>
         <div class="value hora">${hora}</div>
         <div class="value periodo">${periodo}</div>
         <div class="value tipoVerif">${tipoVerif}</div>
@@ -137,6 +137,7 @@ class PwVerificacionPrint extends LitElement {
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
+        timeZone: 'UTC'
       });
     }
 
