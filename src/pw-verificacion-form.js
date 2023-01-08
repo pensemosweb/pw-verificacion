@@ -137,7 +137,8 @@ export class PwVerificacionForm extends LitElement {
     `;
   }
 
-  print() {
+  print(e) {
+    e.preventDefault();
     window.print();
   }
 }
