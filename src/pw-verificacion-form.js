@@ -7,7 +7,7 @@ import './pw-verificacion-last-row/pw-verificacion-last-row.js';
 import { renderFirstRow } from './templates/renderFirstRow.js';
 import { renderEquipioTecnicFolio } from './templates/renderEquipoTecnicoFolio.js';
 import { renderDatosPropietario } from './templates/renderDatosPropietario.js';
-
+import { renderDatosVehiculo } from './templates/renderDatosVehiculo.js';
 import '@vaadin/button';
 
 export class PwVerificacionForm extends LitElement {
@@ -42,16 +42,6 @@ export class PwVerificacionForm extends LitElement {
 
   render() {
     const {
-      marca,
-      submarca,
-      modelo,
-      modeloDSL,
-      serie,
-      placas,
-      pesoBruto,
-      combustible,
-      clase,
-      servicio,
       limiteLuz,
       limiteOpacidad,
       resultadoLuz,
@@ -95,20 +85,19 @@ export class PwVerificacionForm extends LitElement {
 
           <div class="vehiculo">
             <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
-            <pw-verificacion-datos-vehiculo
-              .marca=${marca}
-              .submarca=${submarca}
-              .modelo=${modelo}
-              .modeloDSL=${modeloDSL}
-              .serie=${serie}
-              .placas=${placas}
-              .pesoBruto=${pesoBruto}
-              .combustible=${combustible}
-              .clase=${clase}
-              .servicio=${servicio}
-              ?is-disabled=${this.isDisabled}
-            >
-            </pw-verificacion-datos-vehiculo>
+            ${renderDatosVehiculo({
+              marca: this.fields.marca,
+              submarca: this.fields.submarca,
+              modelo: this.fields.modelo,
+              modeloDSL: this.fields.modeloDSL,
+              serie: this.fields.serie,
+              placas: this.fields.placas,
+              pesoBruto: this.fields.pesoBruto,
+              combustible: this.fields.combustible,
+              clase: this.fields.clase,
+              servicio: this.fields.servicio,
+              isDisabled: this.isDisabled,
+            })}
           </div>
         </section>
 
