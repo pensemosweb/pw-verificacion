@@ -15,7 +15,7 @@ export function renderDatosPropietario(fields) {
           placeholder="Nombre Completo"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
-          error-message="El nombre es obligatorio"
+          error-message="El Nombre es obligatorio"
         ></vaadin-text-field>
         <br />
         <vaadin-text-field
@@ -23,10 +23,10 @@ export function renderDatosPropietario(fields) {
           name="direccion"
           required
           .value=${fields.direccion}
-          placeholder="Ingrese la dirección"
+          placeholder="Direccón"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
-          error-message="La direccion es obligatoria"
+          error-message="La dirección es obligatoria"
         ></vaadin-text-field>
       </div>
 
@@ -36,10 +36,10 @@ export function renderDatosPropietario(fields) {
           name="codigoPostal"
           required
           .value=${fields.codigoPostal}
-          placeholder="Codigo postal"
+          placeholder="Código postal"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
-          error-message="El codigo postal es obligatorio"
+          error-message="El código postal es obligatorio"
         ></vaadin-text-field>
 
         <vaadin-text-field
@@ -47,7 +47,7 @@ export function renderDatosPropietario(fields) {
           name="municipio"
           required
           .value=${fields.municipio}
-          placeholder="Ingrese el municipio al que corresponde"
+          placeholder="Ingrese el municipio"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
           error-message="El nombre del municipio es obligatorio"
@@ -58,7 +58,7 @@ export function renderDatosPropietario(fields) {
           name="estado"
           required
           .value=${fields.estado}
-          placeholder="Ingrese el estado al que corresponde"
+          placeholder="Ingrese el estado"
           @input=${onInput}
           ?disabled=${fields.isDisabled}
           error-message="El nombre del estado es obligatorio"
