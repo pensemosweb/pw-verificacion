@@ -67,39 +67,44 @@ export function renderFirstRow(fields) {
       </div>
 
       <div class="flex flex-cols">
-        <label for="tipo-verif">tipo de verif.:</label>
-        <input
-          type="text"
-          @input=${onInput}
-          .value=${fields.tipoVerif}
-          id="tipo-verif"
+        <vaadin-text-field
+          label="tipo de verif.:"
           name="tipoVerif"
+          required
+          .value=${fields.periodo}
+          placeholder="Tipo Verif."
+          @input=${onInput}
           ?disabled=${fields.isDisabled}
-        />
+          error-message="El tipo de verificación es obligatorio"
+        >
+        </vaadin-text-field>
       </div>
 
       <div class="flex flex-cols">
-        <label for="insp-visual">insp. visual:</label>
-        <input
-          type="text"
+        <vaadin-text-field
+          label="Insp. visual"
           @input=${onInput}
           .value=${fields.inspVisual}
-          id="insp-visual"
           name="inspVisual"
           ?disabled=${fields.isDisabled}
-        />
+          required
+          error-message="La inspección visual es obligatoria"
+        >
+        </vaadin-text-field>
       </div>
 
       <div class="flex flex-cols">
-        <label for="pago">pago:</label>
-        <input
-          type="text"
+        <vaadin-number-field
+          label="Pago"
           @input=${onInput}
           .value=${fields.pago}
-          id="pago"
           name="pago"
           ?disabled=${fields.isDisabled}
-        />
+          required
+          error-message="El pago es obligatorio"
+        >
+          <div slot="prefix">$</div>
+        </vaadin-number-field>
       </div>
 
       <div class="flex flex-cols">
