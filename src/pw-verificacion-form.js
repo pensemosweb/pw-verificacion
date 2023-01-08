@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { LitElement, html, css } from 'lit';
 import '@vaadin/button';
 import '@vaadin/text-field';
@@ -45,10 +46,9 @@ export class PwVerificacionForm extends LitElement {
     return html`
       <form @submit=${this.print}>
         ${this.title ? html`<h1>${this.title}</h1>` : null}
-        <button>
-          <vaadin-button>Imprimir</vaadin-button>
-        </button>
 
+        ${this.renderPrintButton()}
+        
         ${renderFirstRow({
           clave: this.fields.clave,
           fecha: this.fields.fecha,
@@ -129,7 +129,12 @@ export class PwVerificacionForm extends LitElement {
     `;
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  renderPrintButton() {
+    return html`<button>
+      <vaadin-button>Imprimir</vaadin-button>
+    </button>`;
+  }
+
   print(e) {
     e.preventDefault();
     window.print();
