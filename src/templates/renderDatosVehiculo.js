@@ -46,7 +46,6 @@ export function renderDatosVehiculo(fields) {
         placeholder="Modelo DSL"
         @input=${onInput}
         ?disabled=${fields.isDisabled}
-        error-message="El modelo DSL es obligatorio"
       ></vaadin-text-field>
 
       <vaadin-text-field
