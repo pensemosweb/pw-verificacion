@@ -62,7 +62,7 @@ export function renderDatosPropietario(fields) {
           @input=${onInput}
           ?disabled=${fields.isDisabled}
           error-message="El nombre del estado es obligatorio"
-        ></vaadin-text-field>
+        ></vaadin-text-field> 
       </div>
     </section>
   `;
