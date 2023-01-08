@@ -104,7 +104,7 @@ export class PwVerificacionForm extends LitElement {
           ${renderEquipioTecnicFolio({
             equipo: this.fields.equipo,
             tecnico: this.fields.tecnico,
-            folio: this.fields.folio,
+            folio: this.fields.folioAnt,
             isDisabled: this.isDisabled,
           })}
         </section>
