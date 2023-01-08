@@ -5,6 +5,8 @@ import './pw-verificacion-datos-vehiculo/pw-verificacion-datos-vehiculo.js';
 import './pw-verificacion-last-row/pw-verificacion-last-row.js';
 
 import { renderFirstRow } from './templates/renderFirstRow.js';
+import { renderDatosPropietario } from './templates/renderDatosPropietario.js';
+
 import '@vaadin/button';
 
 export class PwVerificacionForm extends LitElement {
@@ -54,11 +56,6 @@ export class PwVerificacionForm extends LitElement {
       resultadoLuz,
       resultadoOpacidad,
       proximaVerif,
-      nombre,
-      direccion,
-      codigoPostal,
-      municipio,
-      estado,
     } = this.fields;
 
     return html`
@@ -79,43 +76,21 @@ export class PwVerificacionForm extends LitElement {
           pagoMulta: this.fields.pagoMulta,
           isDisabled: this.isDisabled,
         })}
-
         <section class="grid grid-cols-2 mbe-2">
-          <div>
+          <div class="datos-propietario-container">
             <h3 class="subtitle">DATOS DEL PROPIETARIO</h3>
             <div class="grid grid-template-cols-auto">
-              <pw-field
-                label="nombre"
-                name="nombre"
-                .value=${nombre}
-                ?is-disabled=${this.isDisabled}
-              ></pw-field>
-              <pw-field
-                label="direccion"
-                name="direccion"
-                .value=${direccion}
-                ?is-disabled=${this.isDisabled}
-              ></pw-field>
-              <pw-field
-                label="C.P.:"
-                name="codigoPostal"
-                .value=${codigoPostal}
-                ?is-disabled=${this.isDisabled}
-              ></pw-field>
-              <pw-field
-                label="municipio"
-                name="municipio"
-                .value=${municipio}
-                ?is-disabled=${this.isDisabled}
-              ></pw-field>
-              <pw-field
-                label="estado"
-                name="estado"
-                .value=${estado}
-                ?is-disabled=${this.isDisabled}
-              ></pw-field>
+              ${renderDatosPropietario({
+                nombre: this.fields.nombre,
+                direccion: this.fields.direccion,
+                codigoPostal: this.fields.codigoPostal,
+                municipio: this.fields.municipio,
+                estado: this.fields.estado,
+                isDisabled: this.isDisabled,
+              })}
             </div>
           </div>
+
           <div class="vehiculo">
             <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
             <pw-verificacion-datos-vehiculo

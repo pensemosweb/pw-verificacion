@@ -7,11 +7,11 @@ export default css`
   }
 
   .grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(12px,1fr));
+    grid-template-rows: repeat(3, minmax(12px, 1fr));
   }
 
   .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(50px,1fr));
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
   }
 
   .grid-cols-2 {
@@ -72,7 +72,7 @@ export default css`
   }
 
   .p-2 {
-    padding: 16px
+    padding: 16px;
   }
 
   .text-lg {
@@ -84,5 +84,12 @@ export default css`
     padding: 0;
     margin: 0;
     background: transparent;
+  }
+
+  .datos-propietario-container {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
   }
 `;
