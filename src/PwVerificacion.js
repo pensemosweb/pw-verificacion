@@ -38,7 +38,7 @@ export class PwVerificacion extends LitElement {
       clase: '',
       servicio: '',
       equipo: 'TECNOTEST',
-      tecnico: 'Mario Alberto Perez Salinas',
+      tecnico: 'Mario Alberto Pérez Salinas',
       folioAnt: '',
       limiteLuz: '',
       limiteOpacidad: '',
