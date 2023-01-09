@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { LitElement, html, css } from 'lit';
 import '@vaadin/button';
 import '@vaadin/text-field';
@@ -48,13 +49,7 @@ export class PwVerificacionForm extends LitElement {
           ${this.title ? html`<h1>${this.title}</h1>` : null}
 
           <section class="actions">
-            <button>
-              <vaadin-button class="btn">Imprimir</vaadin-button>
-            </button>
-
-            <button>
-              <vaadin-button class="btn">Imprimir</vaadin-button>
-            </button>
+            ${this.renderPrintButton()} ${this.renderPrintButton()}
           </section>
         </header>
 
@@ -137,19 +132,19 @@ export class PwVerificacionForm extends LitElement {
 
         <footer class="footer print:hidden">
           <section class="actions">
-            <button>
-              <vaadin-button class="btn">Imprimir</vaadin-button>
-            </button>
-            <button>
-              <vaadin-button class="btn">Imprimir</vaadin-button>
-            </button>
+            ${this.renderPrintButton()} ${this.renderPrintButton()}
           </section>
         </footer>
       </form>
     `;
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  renderPrintButton() {
+    return html`<button>
+      <vaadin-button class="btn">Imprimir</vaadin-button>
+    </button>`;
+  }
+
   print(e) {
     e.preventDefault();
     window.print();
