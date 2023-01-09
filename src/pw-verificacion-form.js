@@ -44,10 +44,19 @@ export class PwVerificacionForm extends LitElement {
   render() {
     return html`
       <form @submit=${this.print}>
-        ${this.title ? html`<h1>${this.title}</h1>` : null}
-        <button>
-          <vaadin-button>Imprimir</vaadin-button>
-        </button>
+        <header>
+          ${this.title ? html`<h1>${this.title}</h1>` : null}
+
+          <section class="actions">
+            <button>
+              <vaadin-button class="btn">Imprimir</vaadin-button>
+            </button>
+
+            <button>
+              <vaadin-button class="btn">Imprimir</vaadin-button>
+            </button>
+          </section>
+        </header>
 
         ${renderFirstRow({
           clave: this.fields.clave,
@@ -125,6 +134,17 @@ export class PwVerificacionForm extends LitElement {
             isDisabled: this.isDisabled,
           })}
         </section>
+
+        <footer class="footer print:hidden">
+          <section class="actions">
+            <button>
+              <vaadin-button class="btn">Imprimir</vaadin-button>
+            </button>
+            <button>
+              <vaadin-button class="btn">Imprimir</vaadin-button>
+            </button>
+          </section>
+        </footer>
       </form>
     `;
   }
