@@ -22,7 +22,6 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
-      border: 1px solid black;
     }
 
     .fecha {
@@ -59,11 +58,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 20mm;
+      margin-block-start: 18mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 20mm;
+      margin-block-start: 18mm;
     }
 
     .datos-propietario {
