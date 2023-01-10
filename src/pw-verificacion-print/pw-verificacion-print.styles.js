@@ -58,11 +58,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 24mm;
+      margin-block-start: 22mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 24mm;
+      margin-block-start: 22mm;
     }
 
     .datos-propietario {
