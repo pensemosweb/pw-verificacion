@@ -79,7 +79,7 @@ export class PwVerificacionForm extends LitElement {
             </div>
           </div>
 
-          <div class="vehiculo">
+          <div class="vehiculo ">
             <h3 class="subtitle">DATOS DEL VEHÍCULO</h3>
             ${renderDatosVehiculo({
               marca: this.fields.marca,
