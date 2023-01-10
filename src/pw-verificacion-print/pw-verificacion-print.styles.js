@@ -169,7 +169,7 @@ export default css`
 
     .clase {
       margin-inline-start: 8mm;
-      width: 10mm;
+      width: 15mm;
     }
 
     .servicio {
