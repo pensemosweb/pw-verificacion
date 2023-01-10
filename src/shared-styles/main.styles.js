@@ -92,4 +92,9 @@ export default css`
     border: 1px solid rgba(0, 0, 0, 0.4);
     padding: 0.5rem;
   }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
