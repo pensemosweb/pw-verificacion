@@ -170,7 +170,7 @@ export default css`
 
     .clase {
       margin-inline-start: 8mm;
-      width: 8mm;
+      width: 10mm;
     }
 
     .servicio {
@@ -214,7 +214,7 @@ export default css`
       grid-template-columns: 35mm 35mm;
       grid-template-rows: 5mm 5mm;
       margin-inline-start: 22mm;
-      margin-block-start: 13mm;
+      margin-block-start: 12mm;
       align-items: center;
       justify-items: center;
     }
