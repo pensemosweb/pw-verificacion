@@ -22,6 +22,7 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
+      border: 1px solid black;
     }
 
     .fecha {
@@ -58,11 +59,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 24mm;
+      margin-block-start: 20mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 24mm;
+      margin-block-start: 20mm;
     }
 
     .datos-propietario {
@@ -213,7 +214,7 @@ export default css`
       grid-template-columns: 35mm 35mm;
       grid-template-rows: 5mm 5mm;
       margin-inline-start: 22mm;
-      margin-block-start: 13mm;
+      margin-block-start: 16mm;
       align-items: center;
       justify-items: center;
     }
