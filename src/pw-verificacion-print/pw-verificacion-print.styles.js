@@ -179,7 +179,7 @@ export default css`
     }
 
     .equipoTecnicoFolioAnt {
-      margin-inline-start: calc(14mm - var(--pw-print-margin-inline));
+      margin-inline-start: calc(12mm - var(--pw-print-margin-inline));
     }
 
     .equipo {
