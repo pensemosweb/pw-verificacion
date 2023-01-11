@@ -58,11 +58,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 22mm;
+      margin-block-start: 26mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 22mm;
+      margin-block-start: 26mm;
     }
 
     .datos-propietario {
@@ -168,8 +168,8 @@ export default css`
     }
 
     .clase {
-      margin-inline-start: 8mm;
-      width: 8mm;
+      margin-inline-start: 10mm;
+      width: 10mm;
     }
 
     .servicio {
