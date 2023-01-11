@@ -22,6 +22,7 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
+      border: 1px solid rgba(0,0,0,0.2)
     }
 
     .fecha {
@@ -178,7 +179,7 @@ export default css`
     }
 
     .equipoTecnicoFolioAnt {
-      margin-inline-start: calc(10mm - var(--pw-print-margin-inline));
+      margin-inline-start: calc(14mm - var(--pw-print-margin-inline));
     }
 
     .equipo {
