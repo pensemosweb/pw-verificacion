@@ -22,7 +22,6 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
-      border: 1px solid rgba(0,0,0,0.2)
     }
 
     .fecha {
