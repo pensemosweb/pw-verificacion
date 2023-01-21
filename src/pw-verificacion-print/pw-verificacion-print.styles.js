@@ -22,11 +22,10 @@ export default css`
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.2pt;
       font-weight: bold;
-      border: 1px solid #ccc;
     }
 
     .fecha {
-      margin-inline-start: 8mm;
+      margin-inline-start: 7mm;
     }
 
     .hora {
@@ -59,11 +58,11 @@ export default css`
     }
 
     .first-row-repetition-one {
-      margin-block-start: 22mm;
+      margin-block-start: 25mm;
     }
 
     .first-row-repetition-two {
-      margin-block-start: 22mm;
+      margin-block-start: 25mm;
     }
 
     .datos-propietario {
@@ -169,17 +168,18 @@ export default css`
     }
 
     .clase {
-      margin-inline-start: 8mm;
-      width: 8mm;
+      margin-inline-start: 10mm;
+      width: 10mm;
     }
 
     .servicio {
-      margin-inline-start: 11mm;
+      margin-inline-start: 8mm;
       width: 16mm;
     }
 
     .equipoTecnicoFolioAnt {
-      margin-inline-start: calc(10mm - var(--pw-print-margin-inline));
+      margin-inline-start: calc(6mm - var(--pw-print-margin-inline));
+      margin-block-start: calc(1mm - var(--pw-print-margin-block));
     }
 
     .equipo {

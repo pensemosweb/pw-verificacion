@@ -1,43 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-MX">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
-  <style>
-    html {
-      --pw-print-margin-block: 0mm;
-      --pw-print-margin-inline: 2mm
-    }
-
-    body,
-    html {
-      margin: 0;
-      padding: .5rem;
-      font-family: sans-serif
-    }
-
-    @media print {
-      body {
-        margin: 0;
-        padding: 0
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
+    <base href="/" />
+    <style>
+      html {
+        --pw-print-margin-block: 0mm;
+        --pw-print-margin-inline: 2mm;
       }
-    }
-
-    @page {
-      margin: 0;
-      padding: 0
-    }
-  </style>
-  <title>pw-verificacion</title>
-</head>
-
-<body><pw-verificacion></pw-verificacion>
-  <script type="module" src="./pw-verificacion/4ea29bad.js"></script>
-  <script
-    inject-service-worker="">"serviceWorker" in navigator && window.addEventListener("load", (function () { navigator.serviceWorker.register("./pw-verificacion/sw.js").then((function () { console.log('ServiceWorker registered from "sw.js".') })).catch((function (e) { console.log("ServiceWorker registration failed: ", e) })) }))</script>
-</body>
-
+      body,
+      html {
+        margin: 0;
+        padding: 0.5rem;
+        font-family: sans-serif;
+      }
+      @media print {
+        body {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      @page {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>pw-verificacion</title>
+  </head>
+  <body>
+    <pw-verificacion></pw-verificacion>
+    <script type="module" src="./pw-verificacion/d3313ca3.js"></script>
+    <script inject-service-worker="">
+      'serviceWorker' in navigator &&
+        window.addEventListener('load', function () {
+          navigator.serviceWorker
+            .register('./pw-verificacion/sw.js')
+            .then(function () {
+              console.log('ServiceWorker registered from "sw.js".');
+            })
+            .catch(function (e) {
+              console.log('ServiceWorker registration failed: ', e);
+            });
+        });
+    </script>
+  </body>
 </html>
